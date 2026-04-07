@@ -2,21 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <Button
-        android:id="@+id/btnReceive"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Receive State" />
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnTransmit"
-        android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnReceive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Receive State" />
+
+        <Button
+            android:id="@+id/btnTransmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Transmit State" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Transmit State" />
+        android:layout_marginTop="24dp"
+        android:text="Logs:"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/logScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="#F0F0F0">
+
+        <TextView
+            android:id="@+id/tvLogs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="#333333"
+            android:textSize="12sp"
+            android:fontFamily="monospace" />
+    </ScrollView>
 
 </LinearLayout>
